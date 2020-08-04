@@ -1,4 +1,4 @@
-#' Takes a noun and makes it plural
+#' Produces the string for one day of the song.
 #'
 #' @param dataset A data frame containing information about gifts
 #' @param line The number of the line for the day you want to sing about

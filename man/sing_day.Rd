@@ -2,7 +2,7 @@
 % Please edit documentation in R/sing_day.R
 \name{sing_day}
 \alias{sing_day}
-\title{Takes a noun and makes it plural}
+\title{Produces the string for one day of the song.}
 \usage{
 sing_day(dataset, line, phrase_col)
 }
@@ -18,5 +18,5 @@ contains the gift phrases}
 A string singing the line of the song with all gifts for the given day.
 }
 \description{
-Takes a noun and makes it plural
+Produces the string for one day of the song.
 }

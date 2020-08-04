@@ -2,7 +2,7 @@
 % Please edit documentation in R/make_phrase.R
 \name{make_phrase}
 \alias{make_phrase}
-\title{Takes a noun and makes it plural}
+\title{Puts the various parts of speech together into a full phrase.}
 \usage{
 make_phrase(num, num_word, item, verb, adjective, location)
 }
@@ -23,5 +23,5 @@ make_phrase(num, num_word, item, verb, adjective, location)
 A string containing the words in grammatical order.
 }
 \description{
-Takes a noun and makes it plural
+Puts the various parts of speech together into a full phrase.
 }

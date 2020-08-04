@@ -1,4 +1,4 @@
-#' Takes a noun and makes it plural
+#' Puts the various parts of speech together into a full phrase.
 #'
 #' @param num An integer
 #' @param num_word A string corresponding to the integer
