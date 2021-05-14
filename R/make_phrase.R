@@ -21,9 +21,12 @@
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
   verb <- str_replace_na(verb, "")
+  adjective <- str_replace_na(adjective, "")
+  location <- str_replace_na(location, "")
+  num_word <- english(num, english.UK = FALSE)
 
-  #????
-
+  phrase_str <- paste(num_word, adjective, item, verb, location)
+  return(phrase_str)
 
 }
 
