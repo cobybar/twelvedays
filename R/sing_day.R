@@ -13,7 +13,7 @@
 #' @import purrr
 #'
 #' @export
-sing_line <- function(dataset, line, phrase_col){
+sing_day <- function(dataset, line, phrase_col){
 
   num_word <- ordinal(line)
   start <- glue("On the {num_word} day of Christmas, my true love gave to me")
