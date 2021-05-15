@@ -15,9 +15,6 @@
 #' @import purrr
 #'
 #' @export
-
-
-
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
   verb <- str_replace_na(verb, "")
@@ -25,8 +22,15 @@ make_phrase <- function(num, num_word, item, verb, adjective, location){
   location <- str_replace_na(location, "")
   num_word <- english(num, english.UK = FALSE)
 
-  phrase_str <- paste(num_word, adjective, item, verb, location)
-  return(phrase_str)
+  if (num == 1) {
+    num_word <- "a"
+  }
+  else {
+    item <- pluralize_gift(item)
+  }
 
+  phrase <- glue("{num_word} {adjective} {item} {verb} {location}")
+
+  return(str_squish(phrase))
 }
 
