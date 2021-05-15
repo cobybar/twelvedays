@@ -28,9 +28,9 @@ sing_day <- function(dataset, line, phrase_col){
   }
 
   else {
-    lines <- phrases[line:2]
-    lines <- paste(lines, collapse = ", \n")
-    lines <- paste(lines, sep = ",\n", "and")
-    return(glue("{start} \n{lines} {end}."))
+    phrases[1] <- paste("and ", phrases[1], sep = "", ".")
+    items <- str_c(phrases[line:1], collapse = ", \n")
+
+    glue("{start} \n{items}")
   }
 }
