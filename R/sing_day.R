@@ -16,14 +16,21 @@
 sing_line <- function(dataset, line, phrase_col){
 
   num_word <- ordinal(line)
-  song <- glue("On the {num_word} day of Christmas, my true love gave to me")
+  start <- glue("On the {num_word} day of Christmas, my true love gave to me")
 
   phrases <- dataset %>%
     pull({{phrase_col}})
 
-  phrases[1] <- paste("and ", phrases[1], sep = "", ".")
-  gifts <- str_c(phrases[line:1], collapse = ", \n")
+  end <- phrases[1]
 
-  glue("{song} \n{gifts}")
+  if (line == 1) {
+    return(glue("{start} {end}."))
+  }
 
+  else {
+    lines <- phrases[line:2]
+    lines <- paste(lines, collapse = ", \n")
+    lines <- paste(lines, sep = ",\n", "and")
+    return(glue("{start} \n{lines} {end}."))
+  }
 }
