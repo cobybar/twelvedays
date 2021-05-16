@@ -1,0 +1,32 @@
+context("sing day")
+
+test_that("sing day returns a song", {
+
+  dataframe <- data.frame(
+   Day = c (1:12), 
+   Day.In.Words = c("first","second","third","fourth","fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"),
+   
+   Gift.Item = c("kit-kat","hershey","reese","snicker","heath", "skittle", "starburst", "butterfinger", "milky way", "twix", "mikenike", "nerd"),
+   
+   Verb = c("","","","","", "a-skipping", "a-standing", "a-flying", "dancing", "a-twiddling", "a-singing", "a-running"),
+   
+   Adjective = c("","milky","giant","nutty","frozen", "", "", "", "", "", "", ""),
+   
+   Location = c("in a candy factory","","","","", "", "", "", "", "", "", ""),
+   
+   stringsAsFactors = FALSE
+)
+   
+  dataframe <- dataframe %>%
+    mutate(
+    Full.Phrase = pmap_chr(dataframe, ~make_phrase(..1, ..2, ..3, ..4, ..5, ..6))
+  )
+
+  expect_equal(sing_day(dataframe, 5, Full.Phrase), 
+"On the fifth day of Christmas, my true love gave to me 
+five frozen heaths, 
+four nutty snickers, 
+three giant reeses, 
+two milky hersheies, 
+and a kit-kat in a candy factory.")
+})
