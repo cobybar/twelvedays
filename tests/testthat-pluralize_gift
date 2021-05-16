@@ -1,4 +1,4 @@
-#' Takes a noun and makes it plural
+#' Tests that pluralize_gift takes a noun and makes it plural
 #'
 #' @param gift A string or vector of strings
 #'
@@ -8,8 +8,10 @@
 #' @import english
 #' @import glue
 #' @import remotes
+#' @import testthat
 #'
-#' @export
+#' test with:
+
 context("pluralize gift")
 
 test_that("pluralize gift returns correct pluaralization for cases", {
