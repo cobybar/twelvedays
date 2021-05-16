@@ -13,7 +13,7 @@
 #' @import glue
 #' @import dplyr
 #' @import purrr
-#' source("R/pluralize_gift.R")
+#'
 #' @export
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
