@@ -13,7 +13,7 @@
 #' @import glue
 #' @import dplyr
 #' @import purrr
-#'
+#' source("R/plotting-fun.R")
 #' @export
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
