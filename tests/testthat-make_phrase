@@ -13,6 +13,7 @@
 #' @import english
 #' @import glue
 #' @import remotes
+#' @import testthat
 #'
 #' test with:
 
