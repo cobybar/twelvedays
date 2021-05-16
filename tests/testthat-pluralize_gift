@@ -1,0 +1,17 @@
+```{r test_pluralize_gift}
+context("pluralize gift")
+
+test_that("pluralize gift returns correct pluaralization for cases", {
+
+  word1 <- "night"
+  word2 <- "baby"
+  word3 <- "car"
+  word4 <- "goose"
+
+  expect_equal(pluralize_gift(word1), "nights")
+  expect_equal(pluralize_gift(word2), "babies")
+  expect_equal(pluralize_gift(word3), "cars")
+  expect_equal(pluralize_gift(word4), "geese")
+
+})
+```
