@@ -7,12 +7,14 @@
 #'
 #' @return A string singing the line of the song with all gifts for the given day.
 #'
-#' @import stringr
-#' @import dplyr
+#' @import tidyverse
+#' @import english
 #' @import glue
-#' @import purrr
+#' @import remotes
+#' @import testthat
 #'
-#' @export
+#' test with:
+
 context("sing day")
 
 test_that("sing day returns a song", {
