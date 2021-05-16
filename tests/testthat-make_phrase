@@ -1,0 +1,28 @@
+
+context("make phrase")
+
+test_that("make phrase returns correct phrase for cases", {
+
+  num1 <- 3
+  num_word1 <- "three"
+  item1 <- "trainer"
+  verb1 <- ""
+  adjective1 <- "tricky"
+  location1 <- ""
+
+ expect_equal(make_phrase(num1, num_word1, item1, verb1, adjective1, location1), "three tricky trainers")
+
+})
+
+test_that("make phrase returns correct phrase for other cases", {
+  
+  num2 <- 8
+  num_word2 <- "eight"
+  item2 <- "eagle"
+  verb2 <- "a-flying"
+  adjective2 <- ""
+  location2 <- ""
+
+  expect_equal(make_phrase(num2, num_word2, item2, verb2, adjective2, location2), "eight eagles a-flying")
+  
+})
