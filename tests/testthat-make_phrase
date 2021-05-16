@@ -1,15 +1,21 @@
-#' Tests to make sure that make_phrase Takes a noun and makes it plural
+#' Tests that make_phrase puts the various parts of speech together into a full phrase.
 #'
-#' @param gift A string or vector of strings
+#' @param num An integer
+#' @param num_word A string corresponding to the integer
+#' @param item A string
+#' @param verb A string
+#' @param adjective A string
+#' @param location A string
 #'
-#' @return A string or vector of strings with the pluralized words
+#' @return A string containing the words in grammatical order.
 #'
 #' @import tidyverse
 #' @import english
 #' @import glue
 #' @import remotes
 #'
-#' test
+#' test with:
+
 context("make phrase")
 
 test_that("make phrase returns correct phrase for cases", {
