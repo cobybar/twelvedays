@@ -1,4 +1,15 @@
-
+#' Tests to make sure that make_phrase Takes a noun and makes it plural
+#'
+#' @param gift A string or vector of strings
+#'
+#' @return A string or vector of strings with the pluralized words
+#'
+#' @import tidyverse
+#' @import english
+#' @import glue
+#' @import remotes
+#'
+#' test
 context("make phrase")
 
 test_that("make phrase returns correct phrase for cases", {
