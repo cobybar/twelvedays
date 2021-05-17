@@ -13,7 +13,7 @@
 #' @import remotes
 #' @import testthat
 #'
-#' test with:
+#' @export
 
 context("sing day")
 
