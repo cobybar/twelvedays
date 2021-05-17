@@ -15,7 +15,7 @@
 #' @import remotes
 #' @import testthat
 #'
-#' test with:
+#' @export
 
 context("make phrase")
 
